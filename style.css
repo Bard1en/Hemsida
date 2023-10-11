@@ -1,0 +1,41 @@
+head{
+    grid-area: head;
+}
+nav{
+    grid-area:nav;
+    text-align:center;
+}
+main{
+    grid-area: main;
+    
+
+}
+footer{
+    grid-area: footer;
+
+}
+.Wrapper{
+display:grid;
+width:100%;
+margin: 0 auto;
+grid-template-rows:50px 40px auto 50px;
+grid-template-areas:
+"head"
+"nav"
+"main"
+"footer";
+}
+h1{
+    text-align:center;
+}
+button{
+    width:200px;
+    height: 80px;
+    background-color:red;
+    
+}
+button:hover{
+    background-color: white;
+    transition-delay: 0.15s;
+
+}
