@@ -1,29 +1,40 @@
-head{
-    grid-area: head;
+body{
+    background-color:rgba(24,7,0,255);
+    color:white;
 }
-nav{
-    grid-area:nav;
-    text-align:center;
+header{
+    grid-area: header;
+    display:grid;
+    background-color: rgba(242, 187, 43);
 }
+
+nav > ul{
+    display: grid;
+    grid-template-columns: 540px 540px 540px;
+}
+
+
 main{
     grid-area: main;
-    
-
+    color:white;
 }
 footer{
     grid-area: footer;
-
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    background-color: rgba(242, 187, 43);
 }
 .Wrapper{
 display:grid;
 width:100%;
-margin: 0 auto;
-grid-template-rows:50px 40px auto 50px;
+margin: 0;
+border-collapse:collapse;
+grid-template-rows:40px 40px auto 50px;
 grid-template-areas:
-"head"
+"header"
 "nav"
 "main"
-"footer";
+"footer"
 }
 h1{
     text-align:center;
@@ -31,11 +42,22 @@ h1{
 button{
     width:200px;
     height: 80px;
-    background-color:red;
-    
+    background-color: rgba(242, 187, 43);
+    vertical-align: center;
+    display:grid;
+    appearance: none;
 }
+
 button:hover{
-    background-color: white;
+    background-color: rgb(165, 164, 164);
     transition-delay: 0.15s;
+    cursor: pointer;
+    border-bottom: solid grey;
 
 }
+button:active{
+    background-color: whitesmoke;
+
+
+}
+
