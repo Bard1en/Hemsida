@@ -1,9 +1,9 @@
-body{
+body{/*Kroppen av hemsidan*/
     background-image: url(https://duhocchaudaiduong.edu.vn/hinh-nen-may-tinh-4k-1920x1080/imager_70_4812_700.jpg); /*Backgrund på hemsidan*/
     background-size:cover;/*Gör så att bakgrunden täcker hela body*/
     height:96vh;/*Gör så att body är 96vh högt, höjden så att det inte går att scrolla upp och ner på hemsidan*/
 }
-.wrapper{
+.wrapper{/*En klass vi skapar så vi kan skapa en grid layout*/
     display:grid;/*Gör så att innhållet i wrapper visas i grid form*/
     width:100%;/*Gör så att wrapper täcker hela hemsidan i bredd*/
     height:100%;/*Gör så att wrapper täcker hela hemsidan i höjd*/
@@ -15,27 +15,27 @@ body{
     "main"
     "footer";
 }
-header{
+header{/*Toppen av hemsidan*/
   grid-area:header;
   text-align:center;/*centerar texten*/
 }
-nav{
+nav{/*navigations fältet där olika länkar finns för att kunna ta sig runt på hemsidan*/
  grid-area:nav;   
  border: 0.1px solid rgba(135, 206, 250, 0);/*Skapar en border och en färg på bordern*/
  background-color: rgba(135, 206, 250, 0.199);/*Vilken bakgrundsfärg nav ska använda*/
 }
-main{
+main{/*Där all information finns på hemsidan*/
     grid-area:main;
 }
-footer{
+footer{/*Botten av hemsidan där man kanske vill lägga kontaktuppgifter och liknande*/
     grid-area:footer;
     font-family:Arial, Helvetica, sans-serif;/*Vilken font texten ska använda*/
     border:30px solid #ace5ee00;;
-    background-color:rgba(43, 102, 138, 0.384);
+    background-color:rgba(43, 102, 138, 0.61);
     text-align:center;
     font-size:23px;/*Vilken storlek texten har*/
 }
-nav > ul{
+nav > ul{/*alla ul som ligger i nav har egenskaperna som står under*/
     display:grid;
     text-align:center;
     grid-template-columns: 0.9fr 2fr 1fr;
@@ -44,41 +44,53 @@ nav > ul{
     font-family:Arial
     
 }
-a{
+a{ /*anchor för att kunna lägga till länkar*/
     text-decoration: none;/*Om texten ska vara dekorerad med understreck eller liknanade*/
     color:black;
 }
-p{
+p{ /*Vanlig text*/
     font-family:Arial;
+    color:white;
 }
-footer>p{
+footer>p{ /*Alla p i footer får dessa egenskaper*/
     margin-top:-13px; /*Ändrar så att distansen från toppen av footer och texten är -13px, kunde inte använda margin-bottom av någon anledning så gick top och la negtativ värde*/
 }
-#ommig main{
+#ommig main{ /*Skapat en id selektor i andra sidan för att kunna göra sida 1 och 2 olika*/
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr ;
     grid-template-rows: auto;
 }
-#ommig p{
+#ommig p{ /*Samma som ovanför fast för just p*/
     font-size: 19px;
 }
-caption{
+#ommig li{ /*--||-- fast för li*/
+    color:white;
+    font-size:25px;
+}
+.högertext{
+    text-align:center;
+}
+.jag{
+    width:750px;
+    height:500px;
+}
+caption{ /*Rubriken ovanför tabeller*/
     text-align:center;
     font-size:35px;
 }
-td{
+td{/*Tabeldata som är där all information som du skriver ner i tabellen ska finnas*/
     text-align:center;
     border: 1px solid black; 
     border-collapse:collapse;/*Lägger ihop de lika borders som finns för att inte behöva ha dubbla borders*/
     height:40px;
-    margin-bottom:30px;
+    margin-bottom:30px; /*Hur långt ifrån botten av td*/
 }
-th{
+th{ /*tablehead, toppen av tabellen*/
     border: 1px solid black;
     height:40px;
     border-collapse:collapse;
 }
-table{
+table{ /*Själva tabellen*/
     margin: auto; /*Alla distanser till sidorna är automatiska*/
     width:80%; /*Bredden på tabelen är 80%*/
     background-color:rgba(135, 206, 250, 0.39);
@@ -86,7 +98,6 @@ table{
 }
 .tabellbild{
     width:40px;
-    display:block; 
 }
 .mastery{
     height:35px;
@@ -95,9 +106,13 @@ table{
 .fortnite{
     width:400px;
 }
-tr:nth-child(even){
+tr:nth-child(even)/*Varannat table row får färgen blå*/
+{
   background-color:rgba(0, 0, 139, 0.295);
 }
-h2{
+h2{/*Rubrik*/
     font-size:40px;
+}
+h3{
+    font-size: 35px;
 }
