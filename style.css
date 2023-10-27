@@ -1,9 +1,9 @@
 body{
-    background-color:#e4f6f9;
     background-image: url(https://duhocchaudaiduong.edu.vn/hinh-nen-may-tinh-4k-1920x1080/imager_70_4812_700.jpg);
     background-size:cover;
     height:96vh;
 }
+/*Jag använder en bakgrund till hela body och har gjort så att den täcker hela backgrunden med en höjd på 96vh*/
 .wrapper{
     display:grid;
     width:100%;
@@ -16,55 +16,67 @@ body{
     "main"
     "footer";
 }
+/*Här är */
 header{
   grid-area:header;
   text-align:center;
 }
+/*header har arean header från wrappers grid-layout och texten i header är centrerad*/
 nav{
  grid-area:nav;   
  border: 0.1px solid rgba(135, 206, 250, 0);
  background-color: rgba(135, 206, 250, 0.199);
 }
+/*Nav har arean Nav från wrappers grid-layout och en border som är svart och en mörkbakgrundsfärg*/
 main{
     grid-area:main;
 }
+/*Main har arean Main från wrappers grid-layout*/
 footer{
     grid-area:footer;
     font-family:Arial, Helvetica, sans-serif;
     border:30px solid #ace5ee00;;
-    background-color:rgba(43, 101, 138, 0.219);
+    background-color:rgba(43, 102, 138, 0.384);
     text-align:center;
-    font-size:18px;
+    font-size:23px;
 }
-footer p{
-    position:relative;
-     top:-25px;
-
-}
+/*Footer har arean footer från wrappens grid-layout, den har fonten arial, en border på 30px som är svart, backgrundsfärg  mörkblå, centrerad text och 23px i höjd på texten*/
 nav > ul{
     display:grid;
     text-align:center;
     grid-template-columns: 0.9fr 2fr 1fr;
     list-style-type:none;
     font-size:22px;
-    font-family:Arial, Helvetica, sans-serif;
-
+    font-family:Arial
+    
 }
+/*Alla ul som ligger i Nav har centerad text, grid columner, ingen understruckning, font storlek på 22px och font arial*/
 a{
     text-decoration: none;
     color:black;
 }
-.namn{
+/*Texten i anchor har ingen text dekoration och färgen svart*/
+p{
+    font-family:Arial;
+}
+/*Texten i p har fonten Roboto*/
+footer>p{
+    margin-top:-13px;
+}
+/**/
+caption{
     text-align:center;
     font-size:35px;
 }
+/*Captionen på tabellen har centerard text och font storlek 35px*/
 td{
     text-align:center;
-    border: 1px solid black;
+    border: 1px solid black; 
     border-collapse:collapse;
     height:40px;
     margin-bottom:30px;
 }
+/*texten är centrerad och har en border på 1 px, de olika borderna är sammanlagda*/
 th{
     border: 1px solid black;
     height:40px;
@@ -90,4 +102,11 @@ table{
     margin-left:-33px;
     height:35px;
     width:28px;
+}
+.fortnite{
+    width:400px;
+}
+
+tr:nth-child(even){
+  background-color:rgba(0, 0, 139, 0.295);
 }
