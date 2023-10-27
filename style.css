@@ -1,112 +1,103 @@
 body{
-    background-image: url(https://duhocchaudaiduong.edu.vn/hinh-nen-may-tinh-4k-1920x1080/imager_70_4812_700.jpg);
-    background-size:cover;
-    height:96vh;
+    background-image: url(https://duhocchaudaiduong.edu.vn/hinh-nen-may-tinh-4k-1920x1080/imager_70_4812_700.jpg); /*Backgrund på hemsidan*/
+    background-size:cover;/*Gör så att bakgrunden täcker hela body*/
+    height:96vh;/*Gör så att body är 96vh högt, höjden så att det inte går att scrolla upp och ner på hemsidan*/
 }
-/*Jag använder en bakgrund till hela body och har gjort så att den täcker hela backgrunden med en höjd på 96vh*/
 .wrapper{
-    display:grid;
-    width:100%;
-    height:100%;
-    margin:0 auto;
-    grid-template-rows: 100px 80px auto 40px;
-    grid-template-areas:
+    display:grid;/*Gör så att innhållet i wrapper visas i grid form*/
+    width:100%;/*Gör så att wrapper täcker hela hemsidan i bredd*/
+    height:100%;/*Gör så att wrapper täcker hela hemsidan i höjd*/
+    margin:0 auto; /**/
+    grid-template-rows: 100px 80px auto 40px;/*Skapar längden på raderna i gridden*/
+    grid-template-areas:/*Namnger de olika grid arean*/
     "header"
     "nav"
     "main"
     "footer";
 }
-/*Här är */
 header{
   grid-area:header;
-  text-align:center;
+  text-align:center;/*centerar texten*/
 }
-/*header har arean header från wrappers grid-layout och texten i header är centrerad*/
 nav{
  grid-area:nav;   
- border: 0.1px solid rgba(135, 206, 250, 0);
- background-color: rgba(135, 206, 250, 0.199);
+ border: 0.1px solid rgba(135, 206, 250, 0);/*Skapar en border och en färg på bordern*/
+ background-color: rgba(135, 206, 250, 0.199);/*Vilken bakgrundsfärg nav ska använda*/
 }
-/*Nav har arean Nav från wrappers grid-layout och en border som är svart och en mörkbakgrundsfärg*/
 main{
     grid-area:main;
 }
-/*Main har arean Main från wrappers grid-layout*/
 footer{
     grid-area:footer;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;/*Vilken font texten ska använda*/
     border:30px solid #ace5ee00;;
     background-color:rgba(43, 102, 138, 0.384);
     text-align:center;
-    font-size:23px;
+    font-size:23px;/*Vilken storlek texten har*/
 }
-/*Footer har arean footer från wrappens grid-layout, den har fonten arial, en border på 30px som är svart, backgrundsfärg  mörkblå, centrerad text och 23px i höjd på texten*/
 nav > ul{
     display:grid;
     text-align:center;
     grid-template-columns: 0.9fr 2fr 1fr;
-    list-style-type:none;
+    list-style-type:none;/*Listorna har ingen style, alltså borttagen punkt*/
     font-size:22px;
     font-family:Arial
     
 }
-/*Alla ul som ligger i Nav har centerad text, grid columner, ingen understruckning, font storlek på 22px och font arial*/
 a{
-    text-decoration: none;
+    text-decoration: none;/*Om texten ska vara dekorerad med understreck eller liknanade*/
     color:black;
 }
-/*Texten i anchor har ingen text dekoration och färgen svart*/
 p{
     font-family:Arial;
 }
-/*Texten i p har fonten Roboto*/
 footer>p{
-    margin-top:-13px;
+    margin-top:-13px; /*Ändrar så att distansen från toppen av footer och texten är -13px, kunde inte använda margin-bottom av någon anledning så gick top och la negtativ värde*/
 }
-/**/
+#ommig main{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+#ommig p{
+    font-size: 19px;
+}
 caption{
     text-align:center;
     font-size:35px;
 }
-/*Captionen på tabellen har centerard text och font storlek 35px*/
 td{
     text-align:center;
     border: 1px solid black; 
-    border-collapse:collapse;
+    border-collapse:collapse;/*Lägger ihop de lika borders som finns för att inte behöva ha dubbla borders*/
     height:40px;
     margin-bottom:30px;
 }
-/*texten är centrerad och har en border på 1 px, de olika borderna är sammanlagda*/
 th{
     border: 1px solid black;
     height:40px;
     border-collapse:collapse;
 }
-
 table{
-    margin: auto;
-    width:80%;
+    margin: auto; /*Alla distanser till sidorna är automatiska*/
+    width:80%; /*Bredden på tabelen är 80%*/
     background-color:rgba(135, 206, 250, 0.39);
     border-collapse:collapse;
 }
 .tabellbild{
-    width:50px;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-
+    width:40px;
+    display:block; 
 }
 .mastery{
-    position:absolute;
-    margin-top:-50px;
-    margin-left:-33px;
     height:35px;
     width:28px;
 }
 .fortnite{
     width:400px;
 }
-
 tr:nth-child(even){
   background-color:rgba(0, 0, 139, 0.295);
+}
+h2{
+    font-size:40px;
 }
